@@ -25,7 +25,7 @@
                 <div>
                     <aura:if isTrue="{!v.maiorlance}">
                     <a class="slds-card__footer-action">Maior Lance: </a>
-                        <br></br>
+                        
                         <ui:outputText value="{!v.leilao.Maior_Lance__c}" aura:id="lance" 
                         class="" />
                         <aura:set attribute="else">
