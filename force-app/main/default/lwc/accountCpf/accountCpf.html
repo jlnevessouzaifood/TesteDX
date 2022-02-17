@@ -1,0 +1,37 @@
+<template>
+    <header class="color slds-modal__header" style="font-size: 1.125rem;">
+        <h2> {label.titulo} </h2>
+     </header>
+     <div  class='cor tamanho margem'>
+        <lightning-formatted-number value={number}></lightning-formatted-number>
+     </div> 
+     <template if:true={isLoading}>
+        <lightning-spinner
+        alternative-text="Carregando"
+        size="medium"
+        ></lightning-spinner>
+    </template>
+    <img src={img} style = 'width: 100px; height: 50px;'>
+     <lightning-button data-id='divTeste' variant="base" label="Base" title="Looks like a link" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+     <lightning-button variant="destructive" label="Base" title="Looks like a link" onclick={handleClick2} class="slds-m-left_x-small"></lightning-button>
+     <lightning-button variant="sucess" label="Base" title="Looks like a link" onclick={handleClick3} class="slds-m-left_x-small"></lightning-button>
+
+
+     <div class= 'div1'>
+      <lightning-input type="text" class='slds-size_1-of-3' onblur={saveanswers} label="Enter some text" ></lightning-input>
+      <lightning-input type="date" class='slds-size_2-of-3' onblur={saveanswers} name="input1" label="Enter a date" ></lightning-input>
+      <lightning-input type="email" class='slds-size_3-of-3' onchange={saveanswers} label="Email address" ></lightning-input>
+     </div>
+     <lightning-button id variant="sucess" label="Salvar" title="Salvar" onclick={save} class="slds-m-left_x-small"></lightning-button>
+
+   <template if:true={table}>
+     <!-- <div style="height: 300px;">
+          <lightning-datatable
+                  key-field="id"
+                  data={data}
+                  columns={columns}>
+          </lightning-datatable>
+      </div>  -->  
+      
+  </template> 
+</template>

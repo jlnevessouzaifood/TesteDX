@@ -1,0 +1,18 @@
+.THIS.colorform {
+    background-color: #4472C4;
+    
+}
+
+.THIS .button {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    margin-left: 95px;
+    
+}
+
+.THIS .teste {
+    background-image: url(/resource/foto);
+    width: 10px;
+    height: 10px;
+}

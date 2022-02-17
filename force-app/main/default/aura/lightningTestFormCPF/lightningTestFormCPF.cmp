@@ -1,0 +1,15 @@
+<aura:component >
+    
+    <aura:attribute name="account" type="Account"/>
+    
+    
+    
+
+        <lightning:input class="namecolor" name="CPF" label="CPF"
+                         value="{!v.account.CPFn__c}"
+                         required="true"
+                        />
+ 
+    
+    
+</aura:component>

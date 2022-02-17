@@ -1,0 +1,18 @@
+<template>
+    <template for:each={listobj} for:item="lineItem">
+        <div key={lineItem.name}>
+            <lightning-formatted-text value={lineItem.name}></lightning-formatted-text>
+            <lightning-formatted-text value={lineItem.date}></lightning-formatted-text>
+            <lightning-formatted-text value={lineItem.email}></lightning-formatted-text>
+        </div>
+
+    </template>    
+      <div style="height: 300px;">
+          <lightning-datatable
+                  key-field="id"
+                  data={data}
+                  columns={columns}                  
+                  onrowselection={selectedRows}>
+          </lightning-datatable>
+      </div>  
+</template>

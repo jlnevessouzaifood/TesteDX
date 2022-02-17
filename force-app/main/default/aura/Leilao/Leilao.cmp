@@ -1,0 +1,182 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global"
+                controller="ContactAndLeadSearch">
+    
+    <aura:attribute name="leilao" type="Leilao__c" default="{'sobjectType':'Leilao__c', 'Maior_Lance__c':''}"/>
+    <aura:attribute name="leilao2" type="Leilao__c" default="{'sobjectType':'Leilao__c', 'Maior_Lance__c':''}"/>
+    <aura:attribute name="leilao3" type="Leilao__c" default="{'sobjectType':'Leilao__c', 'Maior_Lance__c':''}"/>
+    <aura:attribute name="myTitle" type="String"  default="Leilão 1 - Fiat Uno"/>
+    <aura:attribute name="myTitle2" type="String" default="Leilão 2 - Fiat Argo"/>
+    <aura:attribute name="myTitle3" type="String" default="Leilão 3 - Fiat Cronos"/>
+    <aura:attribute name="informacoes" type="String" />
+    <aura:attribute name="lance" type="boolean" default="true" />
+    <aura:attribute name="lance2" type="boolean" default="true" />
+    <aura:attribute name="lance3" type="boolean" default="true" />
+    <aura:attribute name="maiorlance" type="boolean" default="false" />
+    <aura:attribute name="maiorlance2" type="boolean" default="false" />
+    <aura:attribute name="maiorlance3" type="boolean" default="false" />
+    
+    
+    <lightning:layout class="slds-page-header slds-page-header--object-home test">
+        
+
+        <lightning:card title="{!v.myTitle}" >
+            <aura:set attribute="footer">
+                <aura:if isTrue="{!v.lance}">
+                <div>
+                    <aura:if isTrue="{!v.maiorlance}">
+                    <a class="slds-card__footer-action">Maior Lance: </a>
+                        <br></br>
+                        <ui:outputText value="{!v.leilao.Maior_Lance__c}" aura:id="lance" 
+                        class="" />
+                        <aura:set attribute="else">
+                            <div>
+                                <br></br>
+                                <a class="slds-card__footer-action">Ainda não possui Lance</a>
+                                
+                            </div>
+                          </aura:set>
+                    </aura:if>
+                    <lightning:input aura:id="lance" class="" name="Lance"
+                       label="Digite seu Lance:"
+                       value="{!v.leilao.ValordoLance__c}"  required="true"
+                       />    
+                       <br></br>
+                       <lightning:button class="" variant="destructive-text" label="Dar Lance" 
+                       title="Salvar" 
+                       onclick="{!c.Lance}"/>
+                </div>
+                <aura:set attribute="else">
+                    <div>
+                        <br></br>
+                        <a class="slds-card__footer-action">Voce é o Maior Lance </a>
+                        
+                    </div>
+                  </aura:set>
+            </aura:if>
+            </aura:set>
+            
+            
+            <div>
+            <lightning:badge label="Chassi: 65652"/>
+            <lightning:badge label="Marca: Fiat"/>
+            <lightning:badge label="Modelo: Uno"/>
+            <lightning:badge label="Ano: 2010"/>
+            <br></br>
+            <br></br>
+            <lightning:badge label="Cor: Preto"/>
+            <lightning:badge label="KM: 101010"/>
+            <lightning:badge label="Valor Inicial: R$ 10.000,00"/>
+            </div>
+        </lightning:card>
+
+        <div class="card">
+        <lightning:card title="{!v.myTitle2}"  >
+            <aura:set attribute="footer">
+                <aura:if isTrue="{!v.lance2}">
+                <div>
+                   
+                    <aura:if isTrue="{!v.maiorlance2}">
+                        <a class="slds-card__footer-action">Maior Lance: </a>
+                            <br></br>
+                            <ui:outputText value="{!v.leilao2.Maior_Lance__c}" aura:id="lance2" 
+                            class="" />
+                            <aura:set attribute="else">
+                                <div>
+                                    <br></br>
+                                    <a class="slds-card__footer-action">Ainda não possui Lance</a>
+                                    
+                                </div>
+                              </aura:set>
+                        </aura:if>
+
+                    <lightning:input aura:id="lance2" class="" name="Lance2"
+                    label="Digite seu Lance:"
+                       value="{!v.leilao2.ValordoLance__c}"  required="true"
+                       />   
+                       <br></br> 
+                       <lightning:button class="" variant="destructive-text" label="Dar Lance" 
+                       title="Salvar" 
+                       onclick="{!c.Lance2}"/>
+                </div>
+                <aura:set attribute="else">
+                    <div>
+                        <br></br>
+                        <a class="slds-card__footer-action">Voce é o Maior Lance </a>
+                        <br></br>
+                        
+                    </div>
+                  </aura:set>
+            </aura:if>
+            </aura:set>
+            
+            
+            <div>
+            <lightning:badge label="Chassi: 51112"/>
+            <lightning:badge label="Marca: Fiat"/>
+            <lightning:badge label="Modelo: Argo"/>
+            <lightning:badge label="Ano: 2018"/>
+            <br></br>
+            <br></br>
+            <lightning:badge label="Cor: Vermelho"/>
+            <lightning:badge label="KM: 30000"/>
+            
+            <lightning:badge label="Valor Inicial: R$ 20.000,00"/>
+            </div>
+        </lightning:card>
+    </div>
+
+        <lightning:card title="{!v.myTitle3}" >
+            <aura:set attribute="footer">
+                <aura:if isTrue="{!v.lance3}">
+                <div>
+
+                    <aura:if isTrue="{!v.maiorlance3}">
+                    <a class="slds-card__footer-action">Maior Lance: </a>
+                        <br></br>
+                        <ui:outputText value="{!v.leilao3.Maior_Lance__c}" aura:id="lance3" 
+                        class="" />
+                        <aura:set attribute="else">
+                            <div>
+                                <br></br>
+                                <a class="slds-card__footer-action">Ainda não possui Lance</a>
+                                
+                            </div>
+                          </aura:set>
+                    </aura:if> 
+                   
+                    <lightning:input aura:id="lance3" class="" name="Lance3"
+                    label="Digite seu Lance:"
+                       value="{!v.leilao3.ValordoLance__c}"  required="true"
+                       />    
+                       <br></br>
+                       <lightning:button class="" variant="destructive-text" label="Dar Lance" 
+                       title="Salvar" 
+                       onclick="{!c.Lance3}"/>
+                </div>
+                <aura:set attribute="else">
+                    <div>
+                        <br></br>
+                        <a class="slds-card__footer-action">Voce é o Maior Lance </a>
+                        <br></br>
+                        
+                    </div>
+                  </aura:set>
+            </aura:if>
+            </aura:set>
+            
+            <div>
+            <lightning:badge label="Chassi: 123456789"/>
+            <lightning:badge label="Marca: Fiat"/>
+            <lightning:badge label="Modelo: Cronos"/>
+            <lightning:badge label="Ano: 2019"/>
+            <br></br>
+            <br></br>
+            <lightning:badge label="Cor: Branco"/>
+            <lightning:badge label="KM: 50000"/>
+            <lightning:badge label="Valor Inicial: R$ 40.000,00"/>
+            </div>
+        </lightning:card>
+    </lightning:layout>
+    
+  
+</aura:component>

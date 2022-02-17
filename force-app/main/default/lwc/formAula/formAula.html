@@ -1,0 +1,21 @@
+<template>
+    <template if:true={isLoading}>
+        <lightning-spinner
+        alternative-text="Carregando"
+        size="medium"
+        ></lightning-spinner>
+    </template>
+    <div class="slds-form-element__row">      
+        <lightning-record-edit-form object-api-name="Account">            
+            <lightning-input-field class="" id="fieldid" variant="label-hidden" field-name='Atividade__c' value=""></lightning-input-field>
+        </lightning-record-edit-form>   
+        <lightning-input type="text" class='slds-size_1-of-1' onblur={saveName} label="Nome" ></lightning-input>
+        <lightning-input type="text" class='slds-size_1-of-1' onblur={saveCpf} label="CPF" ></lightning-input>
+        <lightning-input type="date" class='slds-size_1-of-1' onchange={saveDate} label="Data de Nascimento" ></lightning-input>
+        <lightning-input type="email" class='slds-size_1-of-1' onblur={saveEmail} label="Email" ></lightning-input>
+        <lightning-input type="tel" class='slds-size_1-of-1' onblur={saveCel} label="Celular" pattern="[0-11]({2})[0-11]{5}-[0-11]{4}"></lightning-input>
+        <lightning-input type="number" class='slds-size_1-of-1' onblur={saveBudget} label="Salário" formatter="currency" step="0.01"></lightning-input>
+    </div>
+    <lightning-button id variant="sucess" label="Salvar" title="Salvar" onclick={save} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button id variant="sucess" label="Atualizar" title="Salvar" onclick={update} class="slds-m-left_x-small"></lightning-button>
+</template>

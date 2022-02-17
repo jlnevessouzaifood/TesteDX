@@ -1,0 +1,74 @@
+<aura:component  >
+
+<aura:attribute name="accounttwo" type="Account"/>
+<aura:attribute name="check" type="boolean"/>
+<aura:attribute name="checktwo" type="boolean"/>
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+<form class="slds-form--stacked">
+    
+    <lightning:input aura:id="accountform" class="namecolor" name="CPF" label="CPF"
+                        value="{!v.accounttwo.CPFn__c}" minlength="11" maxlength="11"
+
+                        required="true" onblur="{!c.cpfValidity}"
+                        />
+    
+    <hr></hr>
+    <br></br>
+    
+    <aura:if isTrue="{!v.check}">
+        <div class="row">
+        <lightning:input aura:id="accountform" class="namecolor size12" name="Name" label="Nome"
+                            value="{!v.accounttwo.Name}"
+                            required="true"
+                            />
+        
+        <lightning:input aura:id="accountform" class="namecolor size12" name="LastName" label="Sobrenome"
+                            value="{!v.accounttwo.LastName__c}"
+                            required="true"
+                            />
+                            <h1 class = "h1color" > Data:   </h1>
+                            <ui:outputText aura:id="accountform" class="namecolor size6" 
+                                                 value="{!v.accounttwo.BirthDate__c}" 
+                            
+                            />            
+        <div class="size3">
+        <h1 class = "h1color" > Idade:   </h1>
+            
+        <ui:outputText value="{!v.accounttwo.Age__c}" aura:id="accountform" 
+                        class="number" />
+            </div>
+            
+        
+        
+        
+        <div onkeydown="{!c.onChangePhone}" class="namecolor size12">
+            <lightning:input aura:id="accountPhone" class="namecolor size12" type="phone" name="Phone" label="Telefone"
+                            value="{!v.accounttwo.Phone}"
+                            required="true"
+                            maxlength="10"
+                            onblur="{!c.onChangePhone}"
+                            />
+        </div>
+        <div onkeydown="{!c.onChangeCellPhone}" class="namecolor size12">
+            <lightning:input aura:id="accountform" class="namecolor size12"  name="CellPhone" label="Celular"
+                            value="{!v.accounttwo.CellPhone__c}" 
+                            required="true"
+                            maxlength="11"
+                            onblur="{!c.onChangeCellPhone}"
+                            />
+        </div>
+        </div>  
+              
+        
+        <aura:set attribute="else" >
+            <h1 class ="number">Preencher CPF</h1>
+        </aura:set>
+    </aura:if>    
+    
+</form>
+
+<br></br>
+
+
+</aura:component>

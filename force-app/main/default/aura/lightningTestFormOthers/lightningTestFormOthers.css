@@ -1,0 +1,73 @@
+.THIS .namecolor label{
+    color: #FFFFFF;
+    font-weight: bolder;
+   
+}
+
+.THIS .h1color {
+    color: #FFFFFF;
+    font-weight: bolder;
+    
+}
+
+.THIS .numbercolor {
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: 100px;    
+}
+
+.THIS .row
+{
+    display:flex;flex-wrap:wrap;margin-right:-5px;margin-left:-5px;
+}
+
+.THIS .size6
+{
+   flex:0 0 50%;max-width:50%;
+}
+
+.THIS .size3
+{
+   flex:0 0 25%;max-width:25%;
+    padding-left: 70px;
+    padding-top: 4px;
+}
+
+.THIS .size32
+{   
+    text-align: right;
+    margin-top: 25px;   
+    margin-left: 50px;
+    width:75px;
+    height:30px;
+}
+
+.THIS .size12
+{
+   flex:0 0 100%;max-width:100%;
+}
+.THIS .size4
+{
+   flex:0 0 33%;max-width:33%;
+}
+
+
+.THIS .number 
+{
+    
+    color: #FFFFFF;
+    font-size: 20px;
+}
+.THIS .column {
+    display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  }
+
+.THIS .rowtwo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }

@@ -1,0 +1,57 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global"
+                controller="ContactAndLeadSearch">
+    
+    <aura:attribute name="account" type="Account" default="{'sobjectType':'Account', 'CPFn__c':''}"/>
+    <aura:attribute name="check" type="boolean"/>
+    <aura:attribute name="checktwo" type="boolean"/>
+    <aura:attribute name="data" type="Object[]"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <c:lightningTestHeader/>
+    
+    <br></br>
+    
+    
+    <aura:if isTrue="{!v.check}">
+    <lightning:layout>
+        <lightning:layoutItem  size="12" >
+            <div aria-labelledby="newcampaignform">
+                <fieldset class="slds-box slds-themedefault slds-containersmall" 
+                          style="background-color: #4472C4">        
+                    
+                    
+                    <c:lightningTestFormOthers accounttwo="{!v.account}"/> 
+                    
+                    <br></br>
+                    
+                    
+                    <br></br>
+                    <br></br>
+                    
+                    <lightning:button class="button" variant="destructive-text" label="Salvar" 
+                                      title="Salvar" 
+                                      onclick="{!c.saveButton }"/>
+                    <lightning:button class="button" variant="destructive-text" label="Cancelar" 
+                                      title="Salvar" 
+                                      onclick="{!c.cancelButton }"/>
+                    
+                    
+                    
+                    
+                </fieldset>
+            </div>
+            
+        </lightning:layoutItem>
+    </lightning:layout>
+    </aura:if>
+    
+    
+    
+    
+    
+    
+    <br></br>
+    
+    
+    
+</aura:component>

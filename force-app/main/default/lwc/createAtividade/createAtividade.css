@@ -1,0 +1,56 @@
+.titleSize{
+    font-size: 64px;
+    margin-left: 45px;;
+    }
+    .titleSize2{
+        font-size: 64px;
+        margin-left: 45px;
+    }
+    .plusButton {
+        margin-left: 60px;
+    }
+    .number {
+        font-size: 96px;
+        color: white;
+        margin-left: 148px;
+    }
+    .lastLine {
+        margin-left: 60px;
+        margin-top: -10px;
+    }
+    .lastLine2 {
+        margin-left: 60px;
+        margin-top: -10px;
+    }
+    .person {         
+        font-size: 48px;
+    }
+
+
+
+.line1 {
+    margin-top: 10px;
+    height: 350px;
+    background-color: cyan;
+     
+}
+.line2 {
+	height: 350px;
+    background-color: gold;
+    
+}
+
+.attach-to-bottom{
+    position: static;    
+    margin-top: 91px;   
+    right: 0;
+    width: 100%;
+    text-align: right;
+    border-left-width: var(--sds-c-modal-sizing-border, var(--lwc-borderWidthThick,2px));
+    border-left-style: solid;
+    border-left-color: var(--sds-c-modal-color-border, var(--lwc-colorBorder,rgb(221, 219, 218)));
+    border-right-width: var(--sds-c-modal-sizing-border, var(--lwc-borderWidthThick,2px));
+    border-right-style: solid;
+    border-right-color: var(--sds-c-modal-color-border, var(--lwc-colorBorder,rgb(221, 219, 218)));
+    
+}

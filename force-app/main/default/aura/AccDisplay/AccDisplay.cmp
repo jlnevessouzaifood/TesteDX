@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome">
+
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="accountRecord" type="Object" />
+
+     <force:recordData recordId="{!v.recordId}"
+          targetRecord="{!v.record}"
+          targetFields="{!v.accountRecord}"
+          fields="Id, Name"/>
+
+    <ui:outputText value="{!v.accountRecord.Name}"/>
+    <ui:outputText value="{!v.accountRecord.Industry}"/>
+    <ui:outputTextArea value="{!v.accountRecord.Description }"/>
+    <ui:outputPhone value="{!v.accountRecord.Phone}"/>
+
+</aura:component>

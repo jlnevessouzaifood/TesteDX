@@ -1,0 +1,8 @@
+{
+    "campo_1" : 1,
+    "campo2" : "Oie",
+    "campo3" : {
+        "subcampo1" : "2021-10-10"
+    }
+
+}   
