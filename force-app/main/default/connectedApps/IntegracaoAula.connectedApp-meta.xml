@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>joao.lucas@nescara.com</contactEmail>
+    <label>IntegracaoAula</label>
+    <oauthConfig>
+        <callbackUrl>https://jlns-dev-ed.lightning.force.com/lightning/services/oauth2/token</callbackUrl>
+        <consumerKey>3MVG9JEx.BE6yifNR6lHQcRJWSG85EdmCpgMiXoC7DMq0lLEP4EyjJydUqdESDnw6xv.dRqG3S4Q5a11t1GhB</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

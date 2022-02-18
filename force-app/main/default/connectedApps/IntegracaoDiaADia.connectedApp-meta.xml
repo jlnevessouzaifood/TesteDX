@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>jlucasnevessouza@gmail.com</contactEmail>
+    <contactPhone>43988566725</contactPhone>
+    <label>IntegracaoDiaADia</label>
+    <oauthConfig>
+        <callbackUrl>https://jlns-dev-ed.lightning.force.com/lightning/services/oauth2/token</callbackUrl>
+        <consumerKey>3MVG9JEx.BE6yifNR6lHQcRJWSFX95WIBofwaVKlfGWZbXRW2WlG7EKmMpXhFCPexOqTetg.tEP313Rsnd7Bf</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

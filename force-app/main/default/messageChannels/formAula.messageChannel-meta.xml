@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Atualizar valores da Tabela</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>JSON dos dados do produto</description>
+        <fieldName>productString</fieldName>
+    </lightningMessageFields>
+    <masterLabel>ProductData</masterLabel>
+</LightningMessageChannel>
