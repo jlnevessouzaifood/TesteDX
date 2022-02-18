@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Customer Account Layout</layout>
+        <sections>
+            <label></label>
+            <section>Sales Region</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Support Plan Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>novo</layout>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Links personalizados</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>TesteCPF</name>
+    </quickActions>
+    <recordTypes>
+        <label></label>
+        <name>AUla</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Customer_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>NovoRegistro</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>PF</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>PJ</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Partner_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>PessoaFisica</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Teste</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Teste123</name>
+    </recordTypes>
+    <webLinks>
+        <label></label>
+        <name>Billing</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Titulo</fullName>
+        <language>pt_BR</language>
+        <protected>true</protected>
+        <shortDescription>Titulo</shortDescription>
+        <value>Título da Tela</value>
+    </labels>
+    <labels>
+        <fullName>label_nome</fullName>
+        <categories>Teste</categories>
+        <language>pt_BR</language>
+        <protected>true</protected>
+        <shortDescription>label_nome</shortDescription>
+        <value>Nome</value>
+    </labels>
+    <labels>
+        <fullName>teste</fullName>
+        <language>pt_BR</language>
+        <protected>true</protected>
+        <shortDescription>teste</shortDescription>
+        <value>Testee</value>
+    </labels>
+</CustomLabels>
